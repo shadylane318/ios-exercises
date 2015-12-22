@@ -12,17 +12,23 @@
 
 - (NSString *)favoriteDrinkForStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @"";
-}
+    return characterDictionary[@"favorite drink"];
+    
+    }
+
 
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
-    return @[];
+    
+    return [charactersArray valueForKey:@"favorite drink"];
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
     /* WORK HERE */
-    return @{};
+    NSMutableDictionary *characterQuote = [characterDictionary mutableCopy];
+    characterQuote [@"quote"] = @"Inside you is potential to make yourself better... and that is what is to be human. To make yourself more than you are.";
+    return characterQuote;
+
 }
 
 @end
